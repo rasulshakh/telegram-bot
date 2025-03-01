@@ -1,0 +1,29 @@
+name: ai_speaking_app
+description: AI-powered English learning app with speech recognition and animated avatars.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <4.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  speech_to_text: ^6.1.0  # Распознавание речи
+  dio: ^5.0.0             # HTTP-запросы (для OpenAI, D-ID API)
+  openai_dart: ^1.0.0
+  google_speech: ^2.0.0   # Анализ произношения с Google Speech-to-Text
+  flutter_tts: ^3.6.3     # Голосовой синтез речи (TTS)
+  provider: ^6.0.5        # Управление состоянием
+  video_player: ^2.7.1    # Воспроизведение видео с D-ID API
+  flutter_dotenv: ^5.1.0  # Хранение API-ключей
+  dart_openai: ^5.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env   # Файл с API-ключами (не забудь его создать)
